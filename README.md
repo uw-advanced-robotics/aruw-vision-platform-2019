@@ -2,7 +2,7 @@
 
 This repository includes all of the vision-related detection, tracking and aiming code from ARUW's 2019 season. This system is responsible for identifying target plates in video footage, calculating a 3D position in the world for that plate, and computing the angle the turret must point to hit the target.
 
-## Capabilitis and results
+## Capabilities and Results
 
 Our system is largely unique among RoboMaster teams' vision systems in three primary ways:
 - We use a machine learning approach to plate detection rather than classical CV. This enables detection in much more diverse environments and positions with minimal manual intervention.
