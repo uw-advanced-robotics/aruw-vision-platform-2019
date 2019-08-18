@@ -31,3 +31,7 @@ Software:
 Follow the instructions in `scripts/xavier-setup/README.md`.
 
 To run the whole production system, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
+
+## Structure and Organization
+
+See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Structure-and-Organization
