@@ -35,3 +35,14 @@ To run the whole production system, run `roslaunch aruw_common prod.launch`. To 
 ## Structure and Organization
 
 See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Structure-and-Organization
+
+## Roadmap
+
+We have a strong foundation which supports advanced use-cases for vision in the RoboMaster competition. However, there are many areas we can improve on to increase accuracy, responsiveness and consistency:
+
+- Make the system more robust to RealSense instability. This requires investigating interop issues at the operating system and library level.
+- Decrease round-trip outer-loop time:
+  - Optimize execution of neural network detector (both the wrapper code and actual inference time)
+  - Investigate moving ballistics and odometry to main controller, and send only 3D position and velocity rather than turret aim.
+- Improve precision of frame and odometry timestamps (eliminate fudge factors)
+- Unit tests and simulations for all major components
