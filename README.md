@@ -36,6 +36,12 @@ To run the whole production system, run `roslaunch aruw_common prod.launch`. To 
 
 See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Structure-and-Organization
 
+## Principle Introduction and Theoretical Support Analysis
+
+See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
+
+Each module's theoretical support can be found under its own wiki page
+
 ## Roadmap
 
 We have a strong foundation which supports advanced use-cases for vision in the RoboMaster competition. However, there are many areas we can improve on to increase accuracy, responsiveness and consistency:
