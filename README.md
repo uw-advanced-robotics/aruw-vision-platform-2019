@@ -27,7 +27,7 @@ Software:
 - ROS Melodic
 - librealsense 2.24+
 - `darknet-aruw` (our custom fork with minor fixes)
-- ![JetPack 4.2.1](https://developer.nvidia.com/embedded/jetpack) (includes OpenCV 3.3.1, CUDA 10.0.326)
+- [JetPack 4.2.1](https://developer.nvidia.com/embedded/jetpack) (includes OpenCV 3.3.1, CUDA 10.0.326)
 
 ## Setup
 
