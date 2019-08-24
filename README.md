@@ -9,7 +9,9 @@ Our system is largely unique among RoboMaster teams' vision systems in three pri
 - We use a depth camera and robot odometry to track targets in world-relative 3D space. This allows us to do more intelligent correction and prediction than would be possible with a naive camera-frame-relative alignment approach.
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
-**TODO: Images and GIFs**
+![Sentinel Test](https://media.giphy.com/media/mF4c5oMxYpQgWZYLTz/giphy.gif)
+![Real Match Result 1](https://media.giphy.com/media/hruTf0Mx1hitL8Bk5W/giphy.gif)
+![Real Match Result 2](https://media.giphy.com/media/Qyzeo1VpX25nayMbls/giphy.gif)
 
 ## Dependencies
 
