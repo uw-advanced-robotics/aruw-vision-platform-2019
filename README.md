@@ -9,11 +9,11 @@ Our system is largely unique among RoboMaster teams' vision systems in three pri
 - We use a depth camera and robot odometry to track targets in world-relative 3D space. This allows us to do more intelligent correction and prediction than would be possible with a naive camera-frame-relative alignment approach.
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
-![Sentinel Test](https://media.giphy.com/media/ZESmHDUtY9SFPgJAbG/giphy.gif)
+![Sentinel Test](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/sentinel_practice-opt.gif?raw=true)
 
-![Real Match Result 1](https://media.giphy.com/media/XbIrI7s2GCJDwjJC1G/giphy.gif)
+![Real Match Result 1](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/ohio48-opt.gif?raw=true)
 
-![Real Match Result 2](https://media.giphy.com/media/Wpf5HfDd06HnukaWV2/giphy.gif)
+![Real Match Result 2](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/ohio23-opt.gif)
 
 ## Dependencies
 
