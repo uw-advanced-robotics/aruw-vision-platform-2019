@@ -10,7 +10,9 @@ Our system is largely unique among RoboMaster teams' vision systems in three pri
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
 ![Sentinel Test](https://media.giphy.com/media/ZESmHDUtY9SFPgJAbG/giphy.gif)
+
 ![Real Match Result 1](https://media.giphy.com/media/XbIrI7s2GCJDwjJC1G/giphy.gif)
+
 ![Real Match Result 2](https://media.giphy.com/media/Wpf5HfDd06HnukaWV2/giphy.gif)
 
 ## Dependencies
