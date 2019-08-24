@@ -10,9 +10,7 @@ Our system is largely unique among RoboMaster teams' vision systems in three pri
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
 ![Sentinel Test](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/sentinel_practice-opt.gif?raw=true)
-
 ![Real Match Result 1](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/ohio48-opt.gif?raw=true)
-
 ![Real Match Result 2](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/ohio23-opt.gif)
 
 ## Dependencies
