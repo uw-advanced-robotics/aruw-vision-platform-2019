@@ -27,7 +27,7 @@ Software:
 - ROS Melodic
 - librealsense 2.24+
 - `darknet-aruw` (our custom fork with minor fixes)
-- [JetPack 4.2.1](https://developer.nvidia.com/embedded/jetpack) (includes OpenCV 3.3.1, CUDA 10.0.326)
+- JetPack 4.2.1 (includes OpenCV 3.3.1, CUDA 10.0.326)
 
 ## Setup
 
@@ -55,3 +55,5 @@ We have a strong foundation which supports advanced use-cases for vision in the 
   - Investigate moving ballistics and odometry to main controller, and send only 3D position and velocity rather than turret aim.
 - Improve precision of frame and odometry timestamps (eliminate fudge factors)
 - Unit tests and simulations for all major components
+
+There are also plans and directions to improve individual modules as well located in their respective wikis: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
