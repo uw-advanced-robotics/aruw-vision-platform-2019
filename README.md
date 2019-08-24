@@ -1,5 +1,7 @@
 # aruw-vision-platform-2019
 
+## Introduction
+
 This repository includes all of the vision-related detection, tracking and aiming code from ARUW's 2019 season. This system is responsible for identifying target plates in video footage, calculating a 3D position in the world for that plate, and computing the angle the turret must point to hit the target.
 
 ## Capabilities and Results
@@ -29,11 +31,11 @@ Software:
 - `darknet-aruw` (our custom fork with minor fixes)
 - JetPack 4.2.1 (includes OpenCV 3.3.1, CUDA 10.0.326)
 
-## Setup
+## Compilation and Installation
 
-Follow the instructions in `scripts/xavier-setup/README.md`.
+Follow the instructions in `scripts/xavier-setup/README.md` to setup the depdencies for an xavier.
 
-To run the whole production system, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
+To run the whole production system on the xavier, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
 
 To enable auto-startup for production use in a real match, enter the `scripts` folder and run `./configure-service.sh -e`. This will configure the app as a service that runs on boot. To disable the service, rune `./configure-service.sh`
 
@@ -46,6 +48,10 @@ See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/
 See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
 
 Each module's theoretical support can be found under its own wiki page
+
+## Software Architecture and Hierachy diagram
+
+See our Wiki: https://github.com/WasabiFan/aruw-vision-platform-2019/wiki/Software-and-Hardware-Block-Diagrams
 
 ## Roadmap
 
