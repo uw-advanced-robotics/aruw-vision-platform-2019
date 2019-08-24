@@ -35,6 +35,8 @@ Follow the instructions in `scripts/xavier-setup/README.md`.
 
 To run the whole production system, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
 
+To enable auto-startup for production use in a real match, enter the `scripts` folder and run `./configure-service.sh -e`. This will configure the app as a service that runs on boot. To disable the service, rune `./configure-service.sh`
+
 ## Structure and Organization
 
 See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Structure-and-Organization
