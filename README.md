@@ -4,10 +4,12 @@
 
 This repository includes all of the vision-related detection, tracking and aiming code from ARUW's 2019 season. This system is responsible for identifying target plates in video footage, calculating a 3D position in the world for that plate, and computing the angle the turret must point to hit the target.
 
-## Capabilities and Results
+It uses a Machine Learning (ML) model to recognize targets, then uses the Intel RealSense deepth feed to compute the 3D point where the plate exists in space. It fuses that point with calculated odometry to negate our own robot movement, filters the location data to minimize noise, and then computes the aim angles necessary to account for the target's motion while the projectile flies through the air. The goal with these additional calculations, as opposed to the traditional style of pointing directly at the target, is to make our vision system effective at long range.
 
-Our system is largely unique among RoboMaster teams' vision systems in three primary ways:
-- We use a machine learning approach to plate detection rather than classical CV. This enables detection in much more diverse environments and positions with minimal manual intervention.
+## Capabilities and Results (Software effects display)
+
+Our system is unique among RoboMaster teams' vision systems in three primary ways:
+- We use a machine learning approach to plate detection rather than classical CV. This enables detection in much more diverse environments and positions with minimal manual intervention. There is no brightness of threshold tuning, and extremely angled plates can still be identified.
 - We use a depth camera and robot odometry to track targets in world-relative 3D space. This allows us to do more intelligent correction and prediction than would be possible with a naive camera-frame-relative alignment approach.
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
@@ -15,7 +17,7 @@ Our system is largely unique among RoboMaster teams' vision systems in three pri
 ![Real Match Result 1](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/.github/ohio23-opt.gif?raw=true)
 ![Real Match Result 2](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/.github/ohio48-opt.gif?raw=true)
 
-## Dependencies
+## Dependencies and Hardware/Software environment
 
 This is the hardware and software we use on our production robots. It is certainly possible to swap out components with minimal effort if desired (e.g., disable GPU support if there is no GPU available, use alternate camera SDK if no RealSense is available).
 
@@ -33,15 +35,27 @@ Software:
 
 ## Compilation and Installation
 
-Follow the instructions in `scripts/xavier-setup/README.md` to setup the depdencies for an xavier.
+Follow the instructions in `scripts/xavier-setup/README.md` to set up the depdencies for an Xavier.
 
-To run the whole production system on the xavier, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
+To run the whole production system on the Xavier, run `roslaunch aruw_common prod.launch`. To only do detection without any serial communication, you can replace `prod.launch` with `dev.launch`.
 
-To enable auto-startup for production use in a real match, enter the `scripts` folder and run `./configure-service.sh -e`. This will configure the app as a service that runs on boot. To disable the service, rune `./configure-service.sh`
+To enable auto-startup for production use in a real match, enter the `scripts` folder and run `./configure-service.sh -e`. This will configure the app as a service that runs on boot. To disable the service, run `./configure-service.sh`.
+
+Our setup scripts will configure Bash aliases for interacting with the service:
+- `vision-status`: displays the running/stopped status of the service and the most recent log output.
+- `vision-start`: start the service.
+- `vision-stop`: stop the service.
+- `vision-log`: `less` the log output from the service.
 
 ## Structure and Organization
 
-See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Structure-and-Organization
+See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Software-Architecture:-File-Structure-and-Organization
+
+## Software and Hardware Block Diagrams and Data Flow
+
+Our wiki has multiple related pages.
+
+Block diagram overview and descriptions: https://github.com/WasabiFan/aruw-vision-platform-2019/wiki/Software-and-Hardware-Block-Diagrams
 
 ## Principle Introduction and Theoretical Support Analysis
 
