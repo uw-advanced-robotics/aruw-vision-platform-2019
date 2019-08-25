@@ -10,7 +10,8 @@ echo "NEW RUN ===================="
 # https://stackoverflow.com/questions/33325301/killing-a-bash-script-does-not-kill-child-processes
 trap 'kill $(jobs -p)' EXIT
 
-PYTHONPATH=/opt/nvidia/jetson-gpio/lib/python:$PYTHONPATH /home/nvidia/catkin_ws/src/aruw-vision-platform-2019/scripts/shutdown-switch-watcher.py &
+# uncomment if you want to enable a custom shutdown switch; requires jetson-gpio library.
+#PYTHONPATH=/opt/nvidia/jetson-gpio/lib/python:$PYTHONPATH /home/nvidia/catkin_ws/src/aruw-vision-platform-2019/scripts/shutdown-switch-watcher.py &
 
 nvpmodel -m 0
 jetson_clocks
@@ -22,7 +23,7 @@ runuser -l nvidia -c '
     source /opt/ros/melodic/setup.bash
     source ~/catkin_ws/devel/setup.bash
     export PYTHONPATH=/home/nvidia/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/melodic/lib/python2.7/dist-packages:/usr/local/lib
-    export PYTHONPATH=/home/nvidia/darknet-aruw-fast:$PYTHONPATH
+    export PYTHONPATH=/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/darknet-aruw:$PYTHONPATH
 
     log_file=$(/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/scripts/choose-log-file.py)
 

@@ -82,7 +82,7 @@ class DetectedTarget:
 
 PROD_CONFIG_FILE = "/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/cv-prod-model/aruw-tiny-V2.cfg"
 PROD_WEIGHTS_FILE = "/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/cv-prod-model/aruw-tiny-V2_prod.weights"
-PROD_USE_TEMPORAL = False
+PROD_USE_TEMPORAL = True
 
 DATA_FILE = "/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/cv-prod-model/aruw.data"
 class DarknetDetector():
