@@ -13,9 +13,9 @@ Our system is unique among RoboMaster teams' vision systems in three primary way
 - We use a depth camera and robot odometry to track targets in world-relative 3D space. This allows us to do more intelligent correction and prediction than would be possible with a naive camera-frame-relative alignment approach.
 - We do ballistics calculation and correction to account for gravity, target motion, chassis motion, and bullet velocity. This becomes more significant at longer range.
 
-![Sentinel Test](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/.github/sentinel_practice-opt.gif?raw=true)
-![Real Match Result 1](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/.github/ohio23-opt.gif?raw=true)
-![Real Match Result 2](https://github.com/WasabiFan/aruw-vision-platform-2019/blob/master/.github/ohio48-opt.gif?raw=true)
+![Sentinel Test](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/blob/master/.github/sentinel_practice-opt.gif?raw=true)
+![Real Match Result 1](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/blob/master/.github/ohio23-opt.gif?raw=true)
+![Real Match Result 2](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/blob/master/.github/ohio48-opt.gif?raw=true)
 
 ## Dependencies and Hardware/Software environment
 
@@ -33,6 +33,8 @@ Software:
 - `darknet-aruw` (our custom fork with minor fixes)
 - JetPack 4.2.1 (includes OpenCV 3.3.1, CUDA 10.0.326)
 
+See below for installation instructions -- most of it is done by the provided scripts.
+
 ## Compilation and Installation
 
 Follow the instructions in `scripts/xavier-setup/README.md` to set up the depdencies for an Xavier.
@@ -49,23 +51,31 @@ Our setup scripts will configure Bash aliases for interacting with the service:
 
 ## Structure and Organization
 
-See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Software-Architecture:-File-Structure-and-Organization
+See our Wiki:  [Software Architecture: File Structure and Organization](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Software-Architecture:-File-Structure-and-Organization)
 
 ## Software and Hardware Block Diagrams and Data Flow
 
-Our wiki has multiple related pages.
+See our Wiki: [Block Diagrams and Data Flow](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Block-Diagrams-and-Data-Flow). Additionally, see these accompanying pages:
 
-Block diagram overview and descriptions: https://github.com/WasabiFan/aruw-vision-platform-2019/wiki/Software-and-Hardware-Block-Diagrams
+- [Custom ROS Messages](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Custom-ROS-Messages): Index of our custom ROS message classes.
+- [Serial Data Protocol](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Serial-Data-Protocol): The byte protocol used in serial communication.
 
 ## Principle Introduction and Theoretical Support Analysis
 
-See our Wiki: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
-
-Each module's theoretical support can be found under its own wiki page
+In addition to the architecture information in past sections, see our Wiki for each of the following:
+- [Armor Plate Detector](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Principle-Introduction-and-Theoretical-Support-Analysis:-Armor-Plate-Detector)
+- [Ballistics](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Principle-Introduction-and-Theoretical-Support-Analysis:-Ballistics)
+- [Linear Kalman Filters](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Principle-Introduction-and-Theoretical-Support-Analysis:-Linear-Kalman-Filters)
+- [Target Tracking and Target Selection](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Principle-Introduction-and-Theoretical-Support-Analysis:-Target-Tracking-and-Target-Selection)
 
 ## Software Architecture and Hierachy diagram
 
-See our Wiki: https://github.com/WasabiFan/aruw-vision-platform-2019/wiki/Software-and-Hardware-Block-Diagrams
+See our Wiki for relevant pages:
+
+- [Software Architecture: File Structure and Organization](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Software-Architecture:-File-Structure-and-Organization)
+- [Block Diagrams and Data Flow](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Block-Diagrams-and-Data-Flow)
+- [Custom ROS Messages](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Custom-ROS-Messages): Index of our custom ROS message classes.
+- [Serial Data Protocol](https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki/Serial-Data-Protocol): The byte protocol used in serial communication.
 
 ## Roadmap
 
@@ -78,4 +88,4 @@ We have a strong foundation which supports advanced use-cases for vision in the 
 - Improve precision of frame and odometry timestamps (eliminate fudge factors)
 - Unit tests and simulations for all major components
 
-There are also plans and directions to improve individual modules as well located in their respective wikis: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
+There are also plans and directions to improve individual modules as well located in their respective wiki pages: https://github.com/uw-advanced-robotics/aruw-vision-platform-2019/wiki
