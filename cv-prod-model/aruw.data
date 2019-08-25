@@ -1,0 +1,6 @@
+classes= 2
+train  = /home/aruw/cv_data/aruw_train.txt
+valid  = /home/aruw/cv_data/aruw_val.txt
+names = /home/nvidia/catkin_ws/src/aruw-vision-platform-2019/cv-prod-model/aruw.names
+backup = /home/aruw/cv_data/yolo_chkpts
+
