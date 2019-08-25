@@ -1,0 +1,1 @@
+bool enable_auto_aim

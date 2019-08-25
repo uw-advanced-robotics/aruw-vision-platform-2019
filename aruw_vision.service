@@ -1,0 +1,11 @@
+[Unit]
+Description=ARUW Vision Service
+After=local-fs.target
+
+[Service]
+User=root
+Type=simple
+ExecStart=/home/nvidia/catkin_ws/src/aruw-vision-platform-2019/scripts/startup.sh
+
+[Install]
+WantedBy=multi-user.target

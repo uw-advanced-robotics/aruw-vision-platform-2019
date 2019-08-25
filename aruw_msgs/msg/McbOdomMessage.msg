@@ -1,0 +1,14 @@
+Header header
+float32 ax
+float32 ay
+float32 az
+float32 rol
+float32 pit
+float32 yaw
+float32 wx
+float32 wy
+float32 wz
+float32 rf_rpm
+float32 lf_rpm
+float32 lb_rpm
+float32 rb_rpm

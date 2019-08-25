@@ -1,0 +1,10 @@
+# Compiled stuff
+**/*.pyc
+
+# Debugging Logs
+.stackdump
+profile_output
+vision_prof*.txt
+
+# VS Code
+.vscode/*

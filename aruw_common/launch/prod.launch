@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="aruw_vision" name="vision" type="vision.py" output="screen" respawn="true"/>
+	<node pkg="aruw_tf_broadcaster" name="tf_broadcaster" type="tf-broadcaster.py" output="screen" respawn="true"/>
+	<node pkg="aruw_serial" name="serial" type="serial_node.py" output="screen"  respawn="true"/>
+	<node pkg="aruw_odometry" name="odometry" type="odometry.py" output="screen" respawn="true"/>
+</launch>
